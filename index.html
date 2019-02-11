@@ -1,0 +1,77 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Psychic-Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script type ="text/javascript" src="game.js"></script>
+</head>
+<body>
+    
+
+    <script>
+        
+
+
+// testing/function for looping (with numbers)  
+
+        
+    var randomNumber = getRandomNumber(10); 
+    var guess;
+    var guessCount = 0;
+    var correctGuess = false;
+    var wins = 0;
+
+    function getRandomNumber(upper) {
+        var num = Math.floor(Math.random()*upper) +1;
+        return num; 
+    }
+    while(true){
+        guess = prompt("I am thinking of a number between 1 and 10. What is it?");
+        guessCount += 1;
+        if (parseInt(guess) === randomNumber){ 
+        correctGuess = true;
+        wins +=1;
+        break; 
+    }
+}
+document.write('<h1>Psychic Game</h1>');
+
+document.write('Losses: ' + guessCount);
+
+document.write('Wins: ' + wins );
+
+
+document.write('Answer: ' + randomNumber);
+        
+// capture input keys   
+// document.onkeyup = function(event) {
+//        var letter = event(1,2,3,4,5,6,7,8,9);
+//        if (letter == getRandomNumber) {
+//       document.write('h was pressed');
+//   } }
+    
+        
+
+
+
+    
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</body>
+</html>
